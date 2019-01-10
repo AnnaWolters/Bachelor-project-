@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --time=1:00:00
+#SBATCH --job-name=Cooperation_2
+#SBATCH --mem=2000MB
+
+module purge
+module load foss/2018a
+g++ -o2 Model_1.1_zerocosts.cpp -o Cooperation_2
+./Cooperation_2
+rm Cooperation_2
